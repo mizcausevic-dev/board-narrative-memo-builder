@@ -36,7 +36,7 @@ function shell(title: string, active: string, body: string, description: string)
     .join("");
 
   return `<!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -49,170 +49,70 @@ function shell(title: string, active: string, body: string, description: string)
     <meta property="og:url" content="${domain}${active === "/" ? "/" : `${active}/`}" />
     <meta name="twitter:card" content="summary_large_image" />
     <style>
-      :root {
-        color-scheme: dark;
-        --bg: #071019;
-        --panel: #101a2b;
-        --panel-alt: #0d1624;
-        --ink: #ecf2ff;
-        --muted: #9fb1c9;
-        --accent: #45f2b4;
-        --line: rgba(114, 142, 188, 0.24);
-        --chip: rgba(73, 242, 180, 0.12);
+      :root{
+        --onyx:#0D0F12;--cream:#F5F2EB;--bluegray:#475B6B;--bluegray-bright:#6E879A;
+        --radius:16px;--maxw:1180px;--ease:cubic-bezier(.22,.61,.36,1);
+        --font:"Geist",-apple-system,sans-serif;--mono:"Geist Mono",ui-monospace,monospace;--serif:"Newsreader",Georgia,serif;
+        --a-emerald:#34D399;--a-cyan:#22D3EE;--a-violet:#A78BFA;--a-amber:#FBBF24;--a-pink:#F472B6;--a-blue:#60A5FA;--a-coral:#FB7185;
       }
-      * { box-sizing: border-box; }
-      body {
-        margin: 0;
-        font-family: "Segoe UI", system-ui, sans-serif;
-        background:
-          radial-gradient(circle at top left, rgba(85, 92, 224, 0.18), transparent 36%),
-          linear-gradient(180deg, #071019, #081221 55%, #0b1830);
-        color: var(--ink);
-      }
-      a { color: #8fd0ff; text-decoration: none; }
-      a:hover { text-decoration: underline; }
-      .wrap { max-width: 1200px; margin: 0 auto; padding: 40px 24px 56px; }
-      .hero, .section, .table-wrap {
-        background: rgba(16, 26, 43, 0.94);
-        border: 1px solid var(--line);
-        border-radius: 28px;
-        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
-      }
-      .hero { padding: 28px; }
-      .eyebrow {
-        display: inline-block;
-        padding: 10px 14px;
-        border-radius: 999px;
-        border: 1px solid rgba(69, 242, 180, 0.3);
-        background: rgba(69, 242, 180, 0.08);
-        color: var(--accent);
-        text-transform: uppercase;
-        letter-spacing: 0.18em;
-        font: 600 12px/1.2 "Consolas", monospace;
-      }
-      h1, h2, h3 {
-        margin: 18px 0 10px;
-        font-family: Georgia, serif;
-        line-height: 1.05;
-      }
-      h1 { font-size: clamp(40px, 7vw, 72px); max-width: 14ch; }
-      h2 { font-size: clamp(28px, 4vw, 42px); }
-      .lede, .section p, td, th, li, .metric-copy {
-        color: var(--muted);
-        line-height: 1.6;
-      }
-      .topbar {
-        display: flex;
-        justify-content: space-between;
-        gap: 18px;
-        align-items: center;
-        margin-bottom: 18px;
-      }
-      .product { font: 700 24px/1.2 "Segoe UI", system-ui, sans-serif; }
-      nav { display: flex; flex-wrap: wrap; gap: 10px; }
-      nav a {
-        padding: 10px 14px;
-        border-radius: 999px;
-        border: 1px solid var(--line);
-        background: rgba(255,255,255,0.02);
-        color: var(--muted);
-      }
-      nav a[aria-current="page"] {
-        border-color: rgba(69, 242, 180, 0.4);
-        background: var(--chip);
-        color: var(--ink);
-      }
-      .metrics {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 14px;
-        margin-top: 22px;
-      }
-      .metric {
-        padding: 18px;
-        background: rgba(255,255,255,0.03);
-        border: 1px solid var(--line);
-        border-radius: 22px;
-      }
-      .metric-label {
-        color: var(--muted);
-        font: 600 12px/1.2 "Consolas", monospace;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-      }
-      .metric-value {
-        display: block;
-        margin-top: 10px;
-        font: 700 34px/1 Georgia, serif;
-      }
-      .section, .table-wrap { margin-top: 28px; padding: 24px; }
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 16px;
-        margin-top: 18px;
-      }
-      .card {
-        padding: 18px;
-        border-radius: 22px;
-        border: 1px solid var(--line);
-        background: var(--panel-alt);
-      }
-      .pill {
-        display: inline-flex;
-        align-items: center;
-        padding: 7px 11px;
-        border-radius: 999px;
-        border: 1px solid var(--line);
-        background: rgba(255,255,255,0.02);
-        color: var(--muted);
-        font: 600 12px/1.1 "Consolas", monospace;
-      }
-      .pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
-      .table-wrap table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 14px;
-      }
-      th, td {
-        text-align: left;
-        vertical-align: top;
-        padding: 14px 12px;
-        border-top: 1px solid var(--line);
-      }
-      th {
-        color: var(--ink);
-        font: 600 12px/1.2 "Consolas", monospace;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-      }
-      footer {
-        margin-top: 28px;
-        padding-top: 18px;
-        border-top: 1px solid var(--line);
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 12px;
-        color: var(--muted);
-      }
-      .footer-links { display: flex; flex-wrap: wrap; gap: 16px; }
-      code {
-        padding: 2px 6px;
-        border-radius: 6px;
-        background: rgba(255,255,255,0.05);
-      }
-      ul { padding-left: 20px; }
+      html[data-theme="dark"]{--ground:#0A0B11;--ink:var(--cream);--ink-dim:#9AA1AD;--ink-faint:#565C68;--surface:rgba(255,255,255,.025);--surface-2:rgba(255,255,255,.045);--line:rgba(255,255,255,.08);--line-soft:rgba(255,255,255,.05);--signal:var(--bluegray-bright);--glow:1}
+      *{margin:0;padding:0;box-sizing:border-box}
+      html{scroll-behavior:smooth}
+      body{background:var(--ground);color:var(--ink);font-family:var(--font);line-height:1.5;letter-spacing:-.011em;-webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative}
+      body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:var(--glow);background:radial-gradient(900px 600px at 12% -5%,rgba(124,92,232,.16),transparent 60%),radial-gradient(800px 600px at 92% 8%,rgba(34,211,238,.10),transparent 55%),radial-gradient(1000px 700px at 70% 100%,rgba(71,91,107,.18),transparent 60%),linear-gradient(180deg,#0A0B11 0%,#0C0E16 55%,#0A0C13 100%)}
+      body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.02;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+      ::selection{background:var(--a-violet);color:#0A0B11}
+      a{color:inherit}
+      .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+      .eyebrow{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint)}
+      .hero{padding:72px 0 48px;position:relative;z-index:2}
+      .hero-shell,.section,.table-wrap,footer{background:var(--surface);border:1px solid var(--line);border-radius:24px;box-shadow:0 24px 80px rgba(0,0,0,.18)}
+      .hero-shell{padding:28px}
+      .topbar{display:flex;justify-content:space-between;gap:18px;align-items:center;margin-bottom:18px}
+      .product{font:600 28px/1.1 var(--font);letter-spacing:-.035em}
+      nav{display:flex;flex-wrap:wrap;gap:10px}
+      nav a{padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface-2);color:var(--ink-dim);font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;transition:border-color .25s var(--ease),color .25s var(--ease),transform .25s var(--ease)}
+      nav a:hover{color:var(--ink);border-color:var(--a-cyan);transform:translateY(-1px)}
+      nav a[aria-current="page"]{border-color:rgba(34,211,238,.45);background:color-mix(in srgb,var(--a-cyan) 10%,transparent);color:var(--ink)}
+      h1,h2,h3{margin:18px 0 10px;line-height:1.04;letter-spacing:-.035em}
+      h1{font-size:clamp(40px,6.4vw,72px);font-weight:600;max-width:14ch;font-family:var(--serif);font-style:italic}
+      h2{font-size:clamp(28px,3.6vw,44px);font-family:var(--serif);font-style:italic;font-weight:600}
+      h3{font-size:20px;font-weight:600}
+      .lede,.section p,td,th,li,.metric-copy{color:var(--ink-dim);line-height:1.6}
+      .lede{margin-top:22px;font-size:17px;max-width:60ch}
+      .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-top:26px}
+      .metric{padding:22px;background:var(--surface-2);border:1px solid var(--line);border-radius:20px;position:relative;overflow:hidden}
+      .metric::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,var(--a-violet),var(--a-cyan))}
+      .metric-label{color:var(--ink-faint);font:500 11px/1.2 var(--mono);letter-spacing:.14em;text-transform:uppercase}
+      .metric-value{display:block;margin-top:12px;font:600 38px/1 var(--serif);letter-spacing:-.04em;color:var(--ink)}
+      .section,.table-wrap{margin-top:28px;padding:24px;position:relative;z-index:2}
+      .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:18px}
+      .card{padding:18px;border-radius:20px;border:1px solid var(--line);background:var(--surface-2);position:relative;overflow:hidden;transition:transform .25s var(--ease),border-color .25s var(--ease)}
+      .card::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,var(--a-emerald),var(--a-cyan));opacity:.9}
+      .card:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--ink) 20%,transparent)}
+      .pill{display:inline-flex;align-items:center;padding:7px 11px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink-dim);font:500 11px/1.1 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+      .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+      .table-wrap table{width:100%;border-collapse:collapse;margin-top:14px}
+      th,td{text-align:left;vertical-align:top;padding:14px 12px;border-top:1px solid var(--line-soft)}
+      th{color:var(--ink);font:500 11px/1.2 var(--mono);letter-spacing:.14em;text-transform:uppercase}
+      code{padding:2px 6px;border-radius:6px;background:rgba(255,255,255,.05)}
+      ul{padding-left:20px}
+      footer{margin-top:28px;padding:18px 20px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;color:var(--ink-dim);font-size:14px}
+      .footer-links{display:flex;flex-wrap:wrap;gap:16px}
+      .footer-links a{font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-dim);text-decoration:none}
+      .footer-links a:hover{color:var(--ink)}
       @media (max-width: 720px) {
         .topbar { flex-direction: column; align-items: flex-start; }
-        .wrap { padding: 18px 14px 28px; }
-        .hero, .section, .table-wrap { padding: 18px; border-radius: 20px; }
+        .wrap { padding: 0 14px; }
+        .hero { padding: 36px 0 24px; }
+        .hero-shell, .section, .table-wrap, footer { padding: 18px; border-radius: 20px; }
       }
     </style>
   </head>
   <body>
     <div class="wrap">
       <section class="hero">
+        <div class="hero-shell">
         <div class="topbar">
           <div class="product">${productTitle}</div>
           <nav>${nav}</nav>
@@ -227,6 +127,7 @@ function shell(title: string, active: string, body: string, description: string)
             <a href="https://kineticgain.com/">Kinetic Gain</a>
           </div>
         </footer>
+        </div>
       </section>
     </div>
   </body>
