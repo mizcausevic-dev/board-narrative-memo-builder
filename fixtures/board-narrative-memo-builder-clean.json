@@ -1,0 +1,257 @@
+{
+  "generatedAt": "2026-05-31T22:43:12.004Z",
+  "items": [
+    {
+      "id": "ai-governance-board-track",
+      "owner": "AI governance lead",
+      "audience": "Board risk committee",
+      "sector": "AI_PLATFORM",
+      "readiness": "BOARD_READY",
+      "memoTheme": "Agent readiness, controlled AI adoption, and procurement-safe governance",
+      "boardQuestion": "Are we governing AI as an operating system or just collecting AI proof points with no executive story?",
+      "currentNarrative": "The AI scorecard, bridge surfaces, and protocol estate already support a coherent board narrative around governed AI adoption and buyer-safe controls.",
+      "headlineGap": "The strongest remaining gap is a shorter board summary that connects technical control proof to an explicit investment path.",
+      "riskScore": 28,
+      "savingsPotentialScore": 74,
+      "investmentPriorityScore": 84,
+      "confidenceScore": 91,
+      "recommendationStrengthScore": 93,
+      "boardMemoHeadline": "AI oversight is credible when the company can show one governed control plane instead of scattered AI demos.",
+      "boardNarrative": "Leadership can defend AI adoption by pointing to policy bundles, prompt provenance, governed tool access, and procurement-safe evidence instead of abstract readiness language.",
+      "nextBoardDecision": "Approve one packaged AI governance memo for the next board cycle and use it as the default investor explanation layer.",
+      "companyTags": [
+        "IBM",
+        "Azure",
+        "OpenAI",
+        "MCP"
+      ],
+      "relatedSurfaces": [
+        "watsonx.kineticgain.com",
+        "suite.kineticgain.com",
+        "board.kineticgain.com"
+      ],
+      "requiredEvidence": [
+        "AI governance scorecard",
+        "protocol controls",
+        "tool-access controls",
+        "audit narrative"
+      ]
+    },
+    {
+      "id": "identity-board-track",
+      "owner": "Identity controls lead",
+      "audience": "Security committee",
+      "sector": "CLOUD_IDENTITY",
+      "readiness": "BOARD_READY",
+      "memoTheme": "Identity exposure, remediation ownership, and endpoint control visibility",
+      "boardQuestion": "What identity and access-control risks still need investment before diligence or incident pressure exposes them?",
+      "currentNarrative": "The identity lane is strong, but the executive story still splits across access posture, app protection, and cross-functional risk.",
+      "headlineGap": "Needs one more explicit investment recommendation that links identity drift to business risk and remediation timing.",
+      "riskScore": 35,
+      "savingsPotentialScore": 74,
+      "investmentPriorityScore": 88,
+      "confidenceScore": 88,
+      "recommendationStrengthScore": 88,
+      "boardMemoHeadline": "Identity risk is already board risk, but the board packet still needs a cleaner investment ask.",
+      "boardNarrative": "Executives can see access, endpoint, and remediation proof, but the memo should tie those controls into one funded identity-hardening decision.",
+      "nextBoardDecision": "Prioritize identity remediation ownership and app-protection rollout as one investment block.",
+      "companyTags": [
+        "CyberArk",
+        "Okta",
+        "Entra",
+        "Intune"
+      ],
+      "relatedSurfaces": [
+        "access.kineticgain.com",
+        "protect.kineticgain.com",
+        "crossrisk.kineticgain.com"
+      ],
+      "requiredEvidence": [
+        "identity scorecard",
+        "endpoint posture",
+        "remediation queue",
+        "owner map"
+      ]
+    },
+    {
+      "id": "revenue-board-track",
+      "owner": "Revenue systems lead",
+      "audience": "Operating review",
+      "sector": "REVENUE_SYSTEMS",
+      "readiness": "BOARD_READY",
+      "memoTheme": "Attribution integrity, reporting trust, and experiment governance",
+      "boardQuestion": "Can the board trust the reported growth story, or is revenue infrastructure still too fragmented?",
+      "currentNarrative": "The reporting and MarTech estate is credible, but the board-facing memo still needs a tighter statement of system risk, leakage, and investment priority.",
+      "headlineGap": "Savings and growth upside are visible in separate tools, but the board story is not yet compressed into one reusable memo.",
+      "riskScore": 35,
+      "savingsPotentialScore": 76,
+      "investmentPriorityScore": 82,
+      "confidenceScore": 88,
+      "recommendationStrengthScore": 88,
+      "boardMemoHeadline": "Revenue systems can support growth, but the board still needs one clearer narrative about where pipeline trust breaks.",
+      "boardNarrative": "Reporting confidence, experimentation discipline, and analytics integrity are all improving, yet the executive summary should still tighten how these surfaces connect to margin and pipeline reliability.",
+      "nextBoardDecision": "Package reporting, experiment, and attribution proof into one revenue memo before the next operating review.",
+      "companyTags": [
+        "Klaviyo",
+        "VWO",
+        "Power BI",
+        "Tableau"
+      ],
+      "relatedSurfaces": [
+        "revenue.kineticgain.com",
+        "martech.kineticgain.com",
+        "proof.kineticgain.com"
+      ],
+      "requiredEvidence": [
+        "revenue scorecard",
+        "attribution narrative",
+        "reporting trust summary",
+        "experiment controls"
+      ]
+    },
+    {
+      "id": "fintech-board-track",
+      "owner": "FinTech controls lead",
+      "audience": "Investor diligence team",
+      "sector": "FINTECH",
+      "readiness": "BOARD_READY",
+      "memoTheme": "Payments, KYC, treasury, and merchant review posture",
+      "boardQuestion": "Where does FinTech operational risk still need investment before it becomes a valuation haircut?",
+      "currentNarrative": "Payments, treasury, KYC, and merchant risk are now legible, but the investor narrative still needs stronger benchmark framing and a cleaner savings-versus-risk contrast.",
+      "headlineGap": "The memo should explicitly contrast what is already safe to defend versus where more diligence pressure is likely.",
+      "riskScore": 35,
+      "savingsPotentialScore": 74,
+      "investmentPriorityScore": 86,
+      "confidenceScore": 88,
+      "recommendationStrengthScore": 88,
+      "boardMemoHeadline": "FinTech risk is becoming understandable, but the investor packet still needs sharper ranking of what to fund first.",
+      "boardNarrative": "Payments, KYC, treasury, and merchant review are no longer isolated surfaces; they form a real control story, but the board memo should still specify the next two funded improvements.",
+      "nextBoardDecision": "Fund the next FinTech control sprint around KYC refresh and merchant review before widening the savings narrative.",
+      "companyTags": [
+        "Payments",
+        "Treasury",
+        "KYC",
+        "Merchant risk"
+      ],
+      "relatedSurfaces": [
+        "payments.kineticgain.com",
+        "treasury.kineticgain.com",
+        "merchant.kineticgain.com"
+      ],
+      "requiredEvidence": [
+        "payments exceptions",
+        "KYC refresh posture",
+        "treasury signals",
+        "merchant review"
+      ]
+    },
+    {
+      "id": "biotech-board-track",
+      "owner": "Quality systems lead",
+      "audience": "Regulated growth review",
+      "sector": "BIOTECH_DIAGNOSTICS",
+      "readiness": "BOARD_READY",
+      "memoTheme": "GxP change control, CAPA, specimen custody, and safety review posture",
+      "boardQuestion": "Can we defend the quality and safety operating story in a way that regulated buyers and investors both trust?",
+      "currentNarrative": "The biotech stack now reads as one quality system across assay readiness, instrument change, CAPA, specimen custody, safety, and event narrative review.",
+      "headlineGap": "Needs only lighter memo compression and one clearer investment ranking, not new proof discovery.",
+      "riskScore": 35,
+      "savingsPotentialScore": 74,
+      "investmentPriorityScore": 82,
+      "confidenceScore": 88,
+      "recommendationStrengthScore": 90,
+      "boardMemoHeadline": "Biotech proof is now coherent enough to support both buyer trust and investor confidence.",
+      "boardNarrative": "Quality, deviation handling, custody, change control, and safety no longer look like separate demos. They now support a conservative, audit-readable growth narrative.",
+      "nextBoardDecision": "Use the biotech memo as a regulated-vertical showcase and only add targeted investment asks where confidence is still lower.",
+      "companyTags": [
+        "GxP",
+        "CAPA",
+        "Specimen",
+        "Safety"
+      ],
+      "relatedSurfaces": [
+        "capa.kineticgain.com",
+        "specimen.kineticgain.com",
+        "safety.kineticgain.com"
+      ],
+      "requiredEvidence": [
+        "change control",
+        "deviation evidence",
+        "specimen chain",
+        "safety review"
+      ]
+    },
+    {
+      "id": "procurement-board-track",
+      "owner": "Procurement strategy lead",
+      "audience": "Buyer enablement review",
+      "sector": "PROCUREMENT_TRUST",
+      "readiness": "BOARD_READY",
+      "memoTheme": "Questionnaire answers, trust-room coverage, RFP speed, and reusable proof posture",
+      "boardQuestion": "Are we reducing procurement drag with a reusable operating system, or are we still relying on manual packet assembly?",
+      "currentNarrative": "The procurement lane is strong and visible now, but the board memo should say more clearly how trust evidence lowers cycle time and unlocks enterprise selling.",
+      "headlineGap": "Needs one cleaner board message linking answer packs, trust rooms, and proof-gap closure to revenue acceleration.",
+      "riskScore": 35,
+      "savingsPotentialScore": 82,
+      "investmentPriorityScore": 82,
+      "confidenceScore": 88,
+      "recommendationStrengthScore": 88,
+      "boardMemoHeadline": "Procurement intelligence is becoming a real revenue lever, but the board story should make the savings logic more explicit.",
+      "boardNarrative": "Questionnaire answers, trust evidence, RFP assembly, and proof-gap scoring now form a real enterprise buyer path. The missing piece is a simpler memo that ties them to cycle-time and margin gains.",
+      "nextBoardDecision": "Approve one procurement memo showing where reusable trust proof shortens enterprise deal friction.",
+      "companyTags": [
+        "Procurement",
+        "Trust center",
+        "RFP",
+        "Proof gap"
+      ],
+      "relatedSurfaces": [
+        "procurement.kineticgain.com",
+        "questionnaire.kineticgain.com",
+        "proofgap.kineticgain.com"
+      ],
+      "requiredEvidence": [
+        "questionnaire answers",
+        "trust artifacts",
+        "RFP outputs",
+        "proof-gap scoring"
+      ]
+    },
+    {
+      "id": "public-sector-board-track",
+      "owner": "Public-sector strategy lead",
+      "audience": "Public-sector diligence review",
+      "sector": "PUBLIC_SECTOR",
+      "readiness": "BOARD_READY",
+      "memoTheme": "Disclosure posture, procurement readiness, and public-sector suitability",
+      "boardQuestion": "What public-sector narrative is still blocked because ownership and memo packaging are not yet in place?",
+      "currentNarrative": "The estate has public-sector-adjacent ingredients, but the memo layer is still blocked by missing ownership and a weaker packaging discipline for that sector.",
+      "headlineGap": "No single board-safe memo yet explains how public-sector readiness differs from generic enterprise proof.",
+      "riskScore": 35,
+      "savingsPotentialScore": 74,
+      "investmentPriorityScore": 82,
+      "confidenceScore": 88,
+      "recommendationStrengthScore": 88,
+      "boardMemoHeadline": "Public-sector expansion is still more packaging problem than capability problem.",
+      "boardNarrative": "Without a dedicated public-sector memo owner, disclosure and procurement signals remain harder to defend in one coherent packet, even though pieces of the system already exist.",
+      "nextBoardDecision": "Assign one owner to package the public-sector narrative before pursuing broader diligence claims.",
+      "companyTags": [
+        "GovTech",
+        "Disclosure",
+        "Procurement",
+        "Readiness"
+      ],
+      "relatedSurfaces": [
+        "procurement.kineticgain.com",
+        "claims.kineticgain.com",
+        "board.kineticgain.com"
+      ],
+      "requiredEvidence": [
+        "public-sector disclosure pack",
+        "procurement narrative",
+        "owner map",
+        "response posture"
+      ]
+    }
+  ]
+}
